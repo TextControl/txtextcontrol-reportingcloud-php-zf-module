@@ -14,7 +14,7 @@ composer require textcontrol/txtextcontrol-reportingcloud-zf3-module
 After installing, you need to copy the configuration file:
 
 ```bash
-/config/reportingcloud.local.php.dist
+/vendor/textcontrol/txtextcontrol-reportingcloud-zf3-module/config/reportingcloud.local.php.dist
 ```
 to your Zend Framework 3 application: 
 
