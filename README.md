@@ -50,6 +50,17 @@ Add the line:
 'TxTextControl\ReportingCloudZf3Module',
 ```
 
-And that is all. You are now ready to use Reporting Cloud in your Zend Framework 3 application.
+Your `/config/modules.config.php` file should look something like this:
+
+```php
+return [
+    'Zend\Router',
+    'Zend\Validator',
+    'TxTextControl\ReportingCloudZf3Module',
+    'Application',
+];
+```
+
+You are now ready to use Reporting Cloud in your Zend Framework 3 application.
 
 ## Usage in Zend Framework 3
