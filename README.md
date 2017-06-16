@@ -59,3 +59,39 @@ return [
 You are now ready to use Reporting Cloud in your Zend Framework 3 application.
 
 ## Usage in Zend Framework 3
+
+The ReportingCloud Zend Framework 3 module registers a Service in the Service Manager under the key `ReportingCloud`.
+
+It is therefore available in Factories as follows:
+
+```php
+use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
+
+class Factory implements FactoryInterface
+{
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    {
+        $reportingCloud = $container->get('ReportingCloud');
+
+        // instantiate and return your object here
+        
+    }
+}
+```
+
+### Controller Plugin
+
+For easy access in Controllers, the following Controller plugin is available:
+
+```php
+$this->reportingCloud();    // returns a \TxTextControl\ReportingCloud\ReportingCloud instance
+```
+
+### View Helper
+
+For easy access in Views, the following Controller helper is available:
+
+```php
+$this->reportingCloud();    // returns a \TxTextControl\ReportingCloud\ReportingCloud instance
+```
