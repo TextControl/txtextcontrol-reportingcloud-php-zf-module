@@ -95,3 +95,8 @@ For easy access in Views, the following Controller helper is available:
 ```php
 $this->reportingCloud();    // returns a \TxTextControl\ReportingCloud\ReportingCloud instance
 ```
+
+ ## Getting Support
+ 
+ The official Zend Framework 3 for ReportingCloud Web API is supported by Text Control GmbH. To start a conversation with the PHP people in the ReportingCloud Support Department, please [create a ticket](http://support.textcontrol.com/new-ticket), selecting _ReportingCloud_ from the department selection list.
+ 
