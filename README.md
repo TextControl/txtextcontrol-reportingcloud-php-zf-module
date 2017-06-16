@@ -90,7 +90,7 @@ $this->reportingCloud();    // returns a \TxTextControl\ReportingCloud\Reporting
 
 ### View Helper
 
-For easy access in Views, the following Controller helper is available:
+For easy access in Views, the following View helper is available:
 
 ```php
 $this->reportingCloud();    // returns a \TxTextControl\ReportingCloud\ReportingCloud instance
