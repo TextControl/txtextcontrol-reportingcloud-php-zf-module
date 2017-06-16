@@ -1,0 +1,29 @@
+{
+    "name": "textcontrol/txtextcontrol-reportingcloud-zf3-module",
+    "description": "Zend Framework 3 Module for ReportingCloud Web API. Authored and supported by Text Control GmbH.",
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-view": "^2.8",
+        "zendframework/zend-mvc": "^3.0.1",
+        "zendframework/zend-servicemanager": "^3.1",
+        "textcontrol/txtextcontrol-reportingcloud": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8 || ^5.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "TxTextControl\\ReportingCloudZf3Module": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "TxTextControlTest\\ReportingCloudZf3Module": "tests/"
+        }
+    }
+}
