@@ -3,6 +3,13 @@
     "description": "Zend Framework 3 Module for ReportingCloud Web API. Authored and supported by Text Control GmbH.",
     "license": "BSD-3-Clause",
     "type": "library",
+    "keywords": [
+        "reporting cloud",
+        "reportingcloud",
+        "zend framework 3",
+        "zf3",
+        "module"
+    ],
     "require": {
         "php": "^5.6 || ^7.0",
         "zendframework/zend-view": "^2.8",
