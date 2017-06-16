@@ -39,12 +39,7 @@ return [
 
 Once you have done this, you are ready to enable the module in your application's module configuration file.
 
-In the file:
-
-```bash
-/config/modules.config.php
-```
-Add the line:
+In the file `/config/modules.config.php`, add the line:
 
 ```php
 'TxTextControl\ReportingCloudZf3Module',
