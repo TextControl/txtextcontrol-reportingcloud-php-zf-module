@@ -37,7 +37,7 @@ return [
 ];
 ```
 
-Once you have done this, you are ready to enable the module in your Zend Framework 3 application's module configuration file.
+Once you have done this, you are ready to enable the module in your application's module configuration file.
 
 In the file:
 
@@ -47,7 +47,7 @@ In the file:
 Add the line:
 
 ```php
-'TxTextControl\Account',
+'TxTextControl\ReportingCloudZf3Module',
 ```
 
 And that is all. You are now ready to use Reporting Cloud in your Zend Framework 3 application.
