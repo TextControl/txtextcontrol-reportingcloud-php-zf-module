@@ -20,7 +20,7 @@ class ReportingCloudFactory implements FactoryInterface
 
     protected function getCredentials($config)
     {
-        $help = "Copy '/config/reportingcloud.local.php.dist' to '/config/autoload/reportingcloud.local.php' in your Zend Framework 3 application, then add your ReportingCloud credentials to that file.";
+        $help = "Copy '/vendor/textcontrol/txtextcontrol-reportingcloud-zf3-module/config/reportingcloud.local.php.dist' to '/config/autoload/reportingcloud.local.php' in your Zend Framework 3 application, then add your ReportingCloud credentials to that file.";
 
         if (!array_key_exists('reportingcloud', $config)) {
             $message = "The key 'reportingcloud' has not been specified in your application's configuration file. {$help}";
