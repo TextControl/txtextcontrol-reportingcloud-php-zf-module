@@ -23,7 +23,7 @@
     },
     "autoload-dev": {
         "psr-0": {
-            "TxTextControlTest\\ReportingCloudZf3Module": "tests/"
+            "TxTextControlTest\\ReportingCloudZf3Module": "test/"
         }
     }
 }
