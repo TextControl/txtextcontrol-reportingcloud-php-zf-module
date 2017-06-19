@@ -4,6 +4,10 @@
 
 ## dev-master
 
+## 0.0.6 - 2017-06-17
+
+Renamed `ReportingCloudZf3Module` to `ReportingCloud`.
+
 ## 0.0.5 - 2017-06-17
 
 Renamed project `txtextcontrol-reportingcloud-zf3-module` to `txtextcontrol-reportingcloud-zf-module`
