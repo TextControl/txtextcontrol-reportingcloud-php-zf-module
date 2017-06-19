@@ -4,6 +4,10 @@
 
 ## dev-master
 
+## 0.0.3 - 2017-06-16
+
+* Added documentation.
+
 ## 0.0.2 - 2017-06-16
 
 * Added documentation.

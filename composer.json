@@ -1,5 +1,5 @@
 {
-    "name": "textcontrol/txtextcontrol-reportingcloud-zf3-module",
+    "name": "textcontrol/txtextcontrol-reportingcloud-zf-module",
     "description": "Zend Framework 3 Module for ReportingCloud Web API. Authored and supported by Text Control GmbH.",
     "license": "BSD-3-Clause",
     "type": "library",
