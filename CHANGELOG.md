@@ -4,6 +4,14 @@
 
 ## dev-master
 
+## 0.0.5 - 2017-06-17
+
+Renamed project `txtextcontrol-reportingcloud-zf3-module` to `txtextcontrol-reportingcloud-zf-module`
+
+## 0.0.4 - 2017-06-17
+
+* Removed `Module.php` in root directory.
+
 ## 0.0.3 - 2017-06-16
 
 * Added documentation.
@@ -14,4 +22,4 @@
 
 ## 0.0.1 - 2017-06-16
 
-* Added minimum code to use ReportingCloud as a Zend Framework 3 module.  
+* Added minimum code to use ReportingCloud as a Zend Framework 3 module.
