@@ -8,13 +8,13 @@
 The recommended way to install the ReportingCloud Zend Framework 3 module in your project is using [Composer](http://getcomposer.org):
 
 ```bash
-composer require textcontrol/txtextcontrol-reportingcloud-zf3-module
+composer require textcontrol/txtextcontrol-reportingcloud-zf-module:^0.1
 ```
 
 After installing, you need to copy the configuration file:
 
 ```bash
-/vendor/textcontrol/txtextcontrol-reportingcloud-zf3-module/config/reportingcloud.local.php.dist
+/vendor/textcontrol/txtextcontrol-reportingcloud-zf-module/config/reportingcloud.local.php.dist
 ```
 to your Zend Framework 3 application: 
 

@@ -4,6 +4,10 @@
 
 ## dev-master
 
+## 0.1.0 - 2017-06-19
+
+* Code quality and documentation updates.
+
 ## 0.0.8 - 2017-06-19
 
 * Code quality updates.
