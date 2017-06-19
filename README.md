@@ -2,6 +2,7 @@
 
 # ReportingCloud Zend Framework 3 Module
 
+[![composer.lock available](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-zf-module/composerlock)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module)
 
 ## Install Using Composer
 
