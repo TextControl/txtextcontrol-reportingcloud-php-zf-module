@@ -4,11 +4,15 @@
 
 ## dev-master
 
-## 0.0.6 - 2017-06-17
+## 0.0.7 - 2017-06-19
+
+Removed duplicate Exceptions.
+
+## 0.0.6 - 2017-06-19
 
 Renamed `ReportingCloudZf3Module` to `ReportingCloud`.
 
-## 0.0.5 - 2017-06-17
+## 0.0.5 - 2017-06-19
 
 Renamed project `txtextcontrol-reportingcloud-zf3-module` to `txtextcontrol-reportingcloud-zf-module`
 
