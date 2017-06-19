@@ -1,6 +1,6 @@
 <?php
 
-namespace TxTextControl\ReportingCloudZf3Module\View\Helper;
+namespace TxTextControl\ReportingCloud\View\Helper;
 
 use TxTextControl\ReportingCloud\ReportingCloud as TxTextControlReportingCloudReportingCloud;
 use Zend\View\Helper\AbstractHelper;

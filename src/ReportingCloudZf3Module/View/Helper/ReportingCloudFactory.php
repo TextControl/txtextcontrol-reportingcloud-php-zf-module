@@ -1,6 +1,6 @@
 <?php
 
-namespace TxTextControl\ReportingCloudZf3Module\View\Helper;
+namespace TxTextControl\ReportingCloud\View\Helper;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;

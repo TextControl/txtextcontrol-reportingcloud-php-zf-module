@@ -1,8 +1,8 @@
 <?php
 
-use TxTextControl\ReportingCloudZf3Module\Mvc\Controller\Plugin\ReportingCloudFactory as ReportingCloudControllerFactory;
-use TxTextControl\ReportingCloudZf3Module\Service\ReportingCloudFactory as ReportingCloudServiceFactory;
-use TxTextControl\ReportingCloudZf3Module\View\Helper\ReportingCloudFactory as ReportingCloudViewFactory;
+use TxTextControl\ReportingCloud\Mvc\Controller\Plugin\ReportingCloudFactory as ReportingCloudControllerFactory;
+use TxTextControl\ReportingCloud\Service\ReportingCloudFactory as ReportingCloudServiceFactory;
+use TxTextControl\ReportingCloud\View\Helper\ReportingCloudFactory as ReportingCloudViewFactory;
 
 return [
     'service_manager'    => [

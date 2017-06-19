@@ -42,7 +42,7 @@ Once you have done this, you are ready to enable the module in your application'
 In the file `/config/modules.config.php`, add the line:
 
 ```php
-'TxTextControl\ReportingCloudZf3Module',
+'TxTextControl\ReportingCloud',
 ```
 
 Your `/config/modules.config.php` file should look something like this:
@@ -51,7 +51,7 @@ Your `/config/modules.config.php` file should look something like this:
 return [
     'Zend\Router',
     'Zend\Validator',
-    'TxTextControl\ReportingCloudZf3Module',
+    'TxTextControl\ReportingCloud',
     'Application',
 ];
 ```

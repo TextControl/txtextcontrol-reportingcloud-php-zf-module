@@ -1,6 +1,6 @@
 <?php
 
-namespace TxTextControl\ReportingCloudZf3Module\Exception;
+namespace TxTextControl\ReportingCloud\Exception;
 
 class RuntimeException extends \RuntimeException implements ExceptionInterface
 {

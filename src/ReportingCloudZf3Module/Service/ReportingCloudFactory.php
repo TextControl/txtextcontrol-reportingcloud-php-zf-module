@@ -1,10 +1,10 @@
 <?php
 
-namespace TxTextControl\ReportingCloudZf3Module\Service;
+namespace TxTextControl\ReportingCloud\Service;
 
 use Interop\Container\ContainerInterface;
 use TxTextControl\ReportingCloud\ReportingCloud;
-use TxTextControl\ReportingCloudZf3Module\Exception\InvalidArgumentException;
+use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class ReportingCloudFactory implements FactoryInterface

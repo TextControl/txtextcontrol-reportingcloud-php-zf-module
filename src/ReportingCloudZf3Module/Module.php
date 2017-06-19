@@ -1,6 +1,6 @@
 <?php
 
-namespace TxTextControl\ReportingCloudZf3Module;
+namespace TxTextControl\ReportingCloud;
 
 class Module
 {
