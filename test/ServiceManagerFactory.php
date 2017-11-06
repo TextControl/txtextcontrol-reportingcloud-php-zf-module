@@ -49,8 +49,8 @@ class ServiceManagerFactory
         return [
             'reportingcloud' => [
                 'credentials' => [
-                    'username' => 'my-username',
-                    'password' => 'my-password',
+                    'username' => 'your-username',
+                    'password' => 'your-password',
                 ],
             ],
         ];
