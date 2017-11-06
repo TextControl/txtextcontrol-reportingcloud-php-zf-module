@@ -2,7 +2,11 @@
 
 # ReportingCloud Zend Framework 3 Module
 
+[![Build Status](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/badges/build.png?b=master)](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TextControl/txtextcontrol-reportingcloud-php-zf-module/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-zf-module/v/stable)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module)
 [![composer.lock available](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-zf-module/composerlock)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module)
+
 
 ## Install Using Composer
 
