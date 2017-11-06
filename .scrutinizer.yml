@@ -1,0 +1,16 @@
+inherit: true
+
+filter:
+    paths:
+    - src/*
+
+build:
+    environment:
+        php: '5.6.16'
+    tests:
+        override:
+            -
+                command: ./vendor/phpunit/phpunit/phpunit
+                coverage:
+                    file: ./build/logs/clover.xml
+                    format: php-clover
