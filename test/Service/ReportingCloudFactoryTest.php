@@ -28,8 +28,8 @@ class ReportingCloudFactoryTest extends TestCase
         try {
             $container = new ServiceManager();
             $this->factory->__invoke($container, '');
-        } catch (ServiceNotFoundException $ex) {
-            $this->assertContains('Unable to resolve service "Config" to a factory', $ex->getMessage());
+        } catch (ServiceNotFoundException $e) {
+            $this->assertContains('Unable to resolve service "Config" to a factory', $e->getMessage());
         }
     }
 
@@ -39,28 +39,29 @@ class ReportingCloudFactoryTest extends TestCase
             $container = new ServiceManager();
             $container->setService('Config', []);
             $this->factory->__invoke($container, '');
-        } catch (InvalidArgumentException $ex) {
-            $this->assertContains("The key 'reportingcloud' has not been specified in your application's configuration file.", $ex->getMessage());
+        } catch (InvalidArgumentException $e) {
+            $needle = "The key 'reportingcloud' has not been specified in your application's configuration file.";
+            $this->assertContains($needle, $e->getMessage());
         }
     }
 
     public function testItRaisesExceptionIfConfigInContainerIsIncomplete2()
     {
-
         try {
             $container = new ServiceManager();
             $container->setService('Config', [
                 'reportingcloud' => [],
             ]);
             $this->factory->__invoke($container, '');
-        } catch (InvalidArgumentException $ex) {
-            $this->assertContains("The key 'credentials' has not been specified under the key 'reportingcloud' in your application's configuration file.", $ex->getMessage());
+        } catch (InvalidArgumentException $e) {
+            $needle = "The key 'credentials' has not been specified under the key ";
+            $needle .= "'reportingcloud' in your application's configuration file.";
+            $this->assertContains($needle, $e->getMessage());
         }
     }
 
     public function testItRaisesExceptionIfConfigInContainerIsIncomplete3()
     {
-
         try {
             $container = new ServiceManager();
             $container->setService('Config', [
@@ -69,8 +70,10 @@ class ReportingCloudFactoryTest extends TestCase
                 ],
             ]);
             $this->factory->__invoke($container, '');
-        } catch (InvalidArgumentException $ex) {
-            $this->assertContains("The key 'username' has not been specified under the key 'reportingcloud', sub-key 'credentials' in your application's configuration file.", $ex->getMessage());
+        } catch (InvalidArgumentException $e) {
+            $needle = "The key 'username' has not been specified under the key ";
+            $needle .= "'reportingcloud', sub-key 'credentials' in your application's configuration file.";
+            $this->assertContains($needle, $e->getMessage());
         }
     }
 
@@ -86,14 +89,15 @@ class ReportingCloudFactoryTest extends TestCase
                 ],
             ]);
             $this->factory->__invoke($container, '');
-        } catch (InvalidArgumentException $ex) {
-            $this->assertContains("The key 'password' has not been specified under the key 'reportingcloud', sub-key 'credentials' in your application's configuration file.", $ex->getMessage());
+        } catch (InvalidArgumentException $e) {
+            $needle = "The key 'password' has not been specified under the key ";
+            $needle .= "'reportingcloud', sub-key 'credentials' in your application's configuration file.";
+            $this->assertContains($needle, $e->getMessage());
         }
     }
 
     public function testItRaisesExceptionIfConfigInContainerIsIncomplete5()
     {
-
         try {
             $container = new ServiceManager();
             $container->setService('Config', [
@@ -104,8 +108,10 @@ class ReportingCloudFactoryTest extends TestCase
                 ],
             ]);
             $this->factory->__invoke($container, '');
-        } catch (InvalidArgumentException $ex) {
-            $this->assertContains("The key 'username' has not been specified under the key 'reportingcloud', sub-key 'credentials' in your application's configuration file.", $ex->getMessage());
+        } catch (InvalidArgumentException $e) {
+            $needle = "The key 'username' has not been specified under the key ";
+            $needle .= "'reportingcloud', sub-key 'credentials' in your application's configuration file.";
+            $this->assertContains($needle, $e->getMessage());
         }
     }
 

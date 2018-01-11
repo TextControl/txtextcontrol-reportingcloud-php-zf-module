@@ -1,23 +1,21 @@
 <?php
 
-use TxTextControl\ReportingCloud\Mvc\Controller\Plugin\ReportingCloudFactory as ReportingCloudControllerPluginFactory;
-use TxTextControl\ReportingCloud\Service\ReportingCloudFactory as ReportingCloudServiceFactory;
-use TxTextControl\ReportingCloud\View\Helper\ReportingCloudFactory as ReportingCloudViewHelperFactory;
+namespace TxTextControl\ReportingCloud;
 
 return [
     'service_manager'    => [
         'factories' => [
-            'ReportingCloud' => ReportingCloudServiceFactory::class,
+            'ReportingCloud' => Service\ReportingCloudFactory::class,
         ],
     ],
     'controller_plugins' => [
         'factories' => [
-            'reportingCloud' => ReportingCloudControllerPluginFactory::class,
+            'reportingCloud' => Mvc\Controller\Plugin\ReportingCloudFactory::class,
         ],
     ],
     'view_helpers'       => [
         'factories' => [
-            'reportingCloud' => ReportingCloudViewHelperFactory::class,
+            'reportingCloud' => View\Helper\ReportingCloudFactory::class,
         ],
     ],
 ];
