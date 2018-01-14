@@ -18,29 +18,38 @@ class ReportingCloudFactory implements FactoryInterface
         return new ReportingCloud($credentials);
     }
 
-    // @codingStandardsIgnoreStart
-
     protected function getCredentials($config)
     {
-        $help = "Copy '/vendor/textcontrol/txtextcontrol-reportingcloud-zf3-module/config/reportingcloud.local.php.dist' to '/config/autoload/reportingcloud.local.php' in your Zend Framework 3 application, then add your ReportingCloud credentials to that file.";
+        $source = '/vendor/textcontrol/txtextcontrol-reportingcloud-zf3-module/config/reportingcloud.local.php.dist';
+        $dest   = '/config/autoload/reportingcloud.local.php';
+
+        $help = "Copy '{$source}' to '{$dest}' in your Zend Framework 3 application, ";
+        $help .= "then add your ReportingCloud credentials to that file.";
 
         if (!array_key_exists('reportingcloud', $config)) {
-            $message = "The key 'reportingcloud' has not been specified in your application's configuration file. {$help}";
+            $message = "The key 'reportingcloud' has not been specified in your application's configuration file. ";
+            $message .= $help;
             throw new InvalidArgumentException($message);
         }
 
         if (!array_key_exists('credentials', $config['reportingcloud'])) {
-            $message = "The key 'credentials' has not been specified under the key 'reportingcloud' in your application's configuration file. {$help}";
+            $message = "The key 'credentials' has not been specified under the key 'reportingcloud' ";
+            $message .= "in your application's configuration file. ";
+            $message .= $help;
             throw new InvalidArgumentException($message);
         }
 
         if (!array_key_exists('username', $config['reportingcloud']['credentials'])) {
-            $message = "The key 'username' has not been specified under the key 'reportingcloud', sub-key 'credentials' in your application's configuration file. {$help}";
+            $message = "The key 'username' has not been specified under the key 'reportingcloud', ";
+            $message .= "sub-key 'credentials' in your application's configuration file. ";
+            $message .= $help;
             throw new InvalidArgumentException($message);
         }
 
         if (!array_key_exists('password', $config['reportingcloud']['credentials'])) {
-            $message = "The key 'password' has not been specified under the key 'reportingcloud', sub-key 'credentials' in your application's configuration file. {$help}";
+            $message = "The key 'password' has not been specified under the key 'reportingcloud', ";
+            $message .= "sub-key 'credentials' in your application's configuration file. ";
+            $message .= $help;
             throw new InvalidArgumentException($message);
         }
 
@@ -49,6 +58,4 @@ class ReportingCloudFactory implements FactoryInterface
             'password' => $config['reportingcloud']['credentials']['password'],
         ];
     }
-
-    // @codingStandardsIgnoreEnd
 }

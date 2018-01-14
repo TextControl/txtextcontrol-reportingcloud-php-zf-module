@@ -6,6 +6,11 @@
 return [
     'reportingcloud' => [
         'credentials' => [
+
+            // either api_key
+            'api_key' => '',
+
+            // or username and password
             'username' => '',
             'password' => '',
         ],
