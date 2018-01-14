@@ -29,7 +29,21 @@ to your Zend Framework 3 application:
 
 Note: The `.dist` prefix has been removed.
 
-Then, add your ReportingCloud credentials to the configuration file:
+Then, add your ReportingCloud credentials to the configuration file.
+
+Do this using either an API key:
+
+```php
+return [
+    'reportingcloud' => [
+        'credentials' => [
+            'api_key' => 'your-api-key',
+        ],
+    ],
+];
+```
+
+Or your username and password:
 
 ```php
 return [
