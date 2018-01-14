@@ -20,6 +20,8 @@ class ReportingCloudFactory implements FactoryInterface
 
     protected function getCredentials($config)
     {
+        $ret = null;
+
         $source = '/vendor/textcontrol/txtextcontrol-reportingcloud-zf3-module/config/reportingcloud.local.php.dist';
         $dest   = '/config/autoload/reportingcloud.local.php';
 
@@ -39,23 +41,28 @@ class ReportingCloudFactory implements FactoryInterface
             throw new InvalidArgumentException($message);
         }
 
-        if (!array_key_exists('username', $config['reportingcloud']['credentials'])) {
-            $message = "The key 'username' has not been specified under the key 'reportingcloud', ";
-            $message .= "sub-key 'credentials' in your application's configuration file. ";
+        $c = $config['reportingcloud']['credentials'];
+
+        if (isset($c['api_key']) && !empty($c['api_key'])) {
+            $ret = [
+                'api_key' => $c['api_key'],
+            ];
+        }
+
+        if (isset($c['username']) && !empty($c['username']) && isset($c['password']) && !empty($c['password'])) {
+            $ret = [
+                'username' => $c['username'],
+                'password' => $c['password'],
+            ];
+        }
+
+        if (null === $ret) {
+            $message = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified under ";
+            $message .= "the key 'reportingcloud', sub-key 'credentials' in your application's configuration file. ";
             $message .= $help;
             throw new InvalidArgumentException($message);
         }
 
-        if (!array_key_exists('password', $config['reportingcloud']['credentials'])) {
-            $message = "The key 'password' has not been specified under the key 'reportingcloud', ";
-            $message .= "sub-key 'credentials' in your application's configuration file. ";
-            $message .= $help;
-            throw new InvalidArgumentException($message);
-        }
-
-        return [
-            'username' => $config['reportingcloud']['credentials']['username'],
-            'password' => $config['reportingcloud']['credentials']['password'],
-        ];
+        return $ret;
     }
 }

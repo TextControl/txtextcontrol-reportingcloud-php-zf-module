@@ -23,6 +23,35 @@ class ReportingCloudFactoryTest extends TestCase
         $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
     }
 
+    public function testItInitializesReportingCloudUsingApiKey()
+    {
+        $container = new ServiceManager();
+        $container->setService('Config', [
+            'reportingcloud' => [
+                'credentials' => [
+                    'api_key' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+                ],
+            ],
+        ]);
+        $reportingCloud = $this->factory->__invoke($container, '');
+        $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
+    }
+
+    public function testItInitializesReportingCloudUsingUsernameAndPassword()
+    {
+        $container = new ServiceManager();
+        $container->setService('Config', [
+            'reportingcloud' => [
+                'credentials' => [
+                    'username' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+                    'password' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+                ],
+            ],
+        ]);
+        $reportingCloud = $this->factory->__invoke($container, '');
+        $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
+    }
+
     public function testItRaisesExceptionIfConfigNotInContainer()
     {
         try {
@@ -71,8 +100,7 @@ class ReportingCloudFactoryTest extends TestCase
             ]);
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
-            $needle = "The key 'username' has not been specified under the key ";
-            $needle .= "'reportingcloud', sub-key 'credentials' in your application's configuration file.";
+            $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
             $this->assertContains($needle, $e->getMessage());
         }
     }
@@ -90,8 +118,7 @@ class ReportingCloudFactoryTest extends TestCase
             ]);
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
-            $needle = "The key 'password' has not been specified under the key ";
-            $needle .= "'reportingcloud', sub-key 'credentials' in your application's configuration file.";
+            $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
             $this->assertContains($needle, $e->getMessage());
         }
     }
@@ -109,8 +136,7 @@ class ReportingCloudFactoryTest extends TestCase
             ]);
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
-            $needle = "The key 'username' has not been specified under the key ";
-            $needle .= "'reportingcloud', sub-key 'credentials' in your application's configuration file.";
+            $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
             $this->assertContains($needle, $e->getMessage());
         }
     }
