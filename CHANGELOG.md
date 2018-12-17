@@ -4,6 +4,10 @@
 
 ## dev-master
 
+## 2.0 - 2018-12-??
+
+* Added support for ReportingCloud PHP Wrapper 2.0.
+
 ## 1.1.1 - 2018-01-14
 
 * Added support for API key authorization.
