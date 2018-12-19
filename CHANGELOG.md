@@ -4,7 +4,11 @@
 
 ## dev-master
 
-## 2.0 - 2018-12-19
+## 2.0.1 - 2018-12-19
+
+* Fixed issue in `.scrutinizer.yml` file.
+
+## 2.0.0 - 2018-12-19
 
 * Added support for ReportingCloud PHP Wrapper 2.0.
 
