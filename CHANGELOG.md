@@ -4,7 +4,7 @@
 
 ## dev-master
 
-## 2.0 - 2018-12-??
+## 2.0 - 2018-12-19
 
 * Added support for ReportingCloud PHP Wrapper 2.0.
 
