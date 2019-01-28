@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TxTextControlTest\ReportingCloud;
 
@@ -7,7 +8,7 @@ use Zend\ServiceManager\ServiceManager;
 
 class ServiceManagerFactory
 {
-    public static function getServiceManager(array $applicationConfig = null)
+    public static function getServiceManager(array $applicationConfig = null): ServiceManager
     {
         $applicationConfig = $applicationConfig ?: static::getApplicationConfig();
         $config            = self::getConfig();
@@ -28,7 +29,7 @@ class ServiceManagerFactory
         return $serviceManager;
     }
 
-    public static function getApplicationConfig()
+    public static function getApplicationConfig(): array
     {
         return [
             'modules' => [
@@ -44,7 +45,7 @@ class ServiceManagerFactory
         ];
     }
 
-    public static function getConfig()
+    public static function getConfig(): array
     {
         return [
             'reportingcloud' => [

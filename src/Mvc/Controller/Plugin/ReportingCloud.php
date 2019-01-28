@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud\Mvc\Controller\Plugin;
 
@@ -14,7 +15,7 @@ class ReportingCloud extends AbstractPlugin
         $this->reportingCloud = $reportingCloud;
     }
 
-    public function __invoke()
+    public function __invoke(): TxTextControlReportingCloudReportingCloud
     {
         return $this->reportingCloud;
     }

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TxTextControlTest\ReportingCloud\Mvc\Controller\Plugin;
 
@@ -8,7 +9,7 @@ use TxTextControl\ReportingCloud\ReportingCloud as ReportingCloudReportingCloud;
 
 class ReportingCloudTest extends TestCase
 {
-    public function testInvocationReturnsReportingCloudInstance()
+    public function testInvocationReturnsReportingCloudInstance(): void
     {
         $reportingCloud = new ReportingCloudReportingCloud();
 

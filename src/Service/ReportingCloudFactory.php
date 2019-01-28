@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud\Service;
 
@@ -9,7 +10,7 @@ use Zend\ServiceManager\Factory\FactoryInterface;
 
 class ReportingCloudFactory implements FactoryInterface
 {
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null): ReportingCloud
     {
         $config = $container->get('Config');
 
@@ -18,7 +19,7 @@ class ReportingCloudFactory implements FactoryInterface
         return new ReportingCloud($credentials);
     }
 
-    protected function getCredentials($config)
+    protected function getCredentials(array $config): array
     {
         $ret = null;
 

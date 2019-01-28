@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud\View\Helper;
 
@@ -14,7 +15,7 @@ class ReportingCloud extends AbstractHelper
         $this->reportingCloud = $reportingCloud;
     }
 
-    public function __invoke()
+    public function __invoke():TxTextControlReportingCloudReportingCloud
     {
         return $this->reportingCloud;
     }

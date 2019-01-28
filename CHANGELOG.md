@@ -4,6 +4,10 @@
 
 ## dev-master
 
+## 2.0.2 - 2019-01-28
+
+* Added strict typing to all files.
+
 ## 2.0.1 - 2018-12-19
 
 * Fixed issue in `.scrutinizer.yml` file.

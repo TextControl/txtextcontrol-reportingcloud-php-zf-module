@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TxTextControlTest\ReportingCloud\Service;
 
@@ -14,7 +15,7 @@ class ReportingCloudFactoryTest extends TestCase
 {
     protected $factory;
 
-    public function testItInitializesReportingCloud()
+    public function testItInitializesReportingCloud(): void
     {
         $container = ServiceManagerFactory::getServiceManager();
 
@@ -23,7 +24,7 @@ class ReportingCloudFactoryTest extends TestCase
         $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
     }
 
-    public function testItInitializesReportingCloudUsingApiKey()
+    public function testItInitializesReportingCloudUsingApiKey(): void
     {
         $container = new ServiceManager();
         $container->setService('Config', [
@@ -37,7 +38,7 @@ class ReportingCloudFactoryTest extends TestCase
         $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
     }
 
-    public function testItInitializesReportingCloudUsingUsernameAndPassword()
+    public function testItInitializesReportingCloudUsingUsernameAndPassword(): void
     {
         $container = new ServiceManager();
         $container->setService('Config', [
@@ -52,7 +53,7 @@ class ReportingCloudFactoryTest extends TestCase
         $this->assertInstanceOf(ReportingCloud::class, $reportingCloud);
     }
 
-    public function testItRaisesExceptionIfConfigNotInContainer()
+    public function testItRaisesExceptionIfConfigNotInContainer(): void
     {
         try {
             $container = new ServiceManager();
@@ -62,7 +63,7 @@ class ReportingCloudFactoryTest extends TestCase
         }
     }
 
-    public function testItRaisesExceptionIfConfigInContainerIsIncomplete1()
+    public function testItRaisesExceptionIfConfigInContainerIsIncomplete1(): void
     {
         try {
             $container = new ServiceManager();
@@ -74,7 +75,7 @@ class ReportingCloudFactoryTest extends TestCase
         }
     }
 
-    public function testItRaisesExceptionIfConfigInContainerIsIncomplete2()
+    public function testItRaisesExceptionIfConfigInContainerIsIncomplete2(): void
     {
         try {
             $container = new ServiceManager();
@@ -89,7 +90,7 @@ class ReportingCloudFactoryTest extends TestCase
         }
     }
 
-    public function testItRaisesExceptionIfConfigInContainerIsIncomplete3()
+    public function testItRaisesExceptionIfConfigInContainerIsIncomplete3(): void
     {
         try {
             $container = new ServiceManager();
@@ -105,7 +106,7 @@ class ReportingCloudFactoryTest extends TestCase
         }
     }
 
-    public function testItRaisesExceptionIfConfigInContainerIsIncomplete4()
+    public function testItRaisesExceptionIfConfigInContainerIsIncomplete4(): void
     {
         try {
             $container = new ServiceManager();
@@ -123,7 +124,7 @@ class ReportingCloudFactoryTest extends TestCase
         }
     }
 
-    public function testItRaisesExceptionIfConfigInContainerIsIncomplete5()
+    public function testItRaisesExceptionIfConfigInContainerIsIncomplete5(): void
     {
         try {
             $container = new ServiceManager();
@@ -141,14 +142,14 @@ class ReportingCloudFactoryTest extends TestCase
         }
     }
 
-    public function testItIsRegisteredInServiceFactory()
+    public function testItIsRegisteredInServiceFactory(): void
     {
         $serviceManager = ServiceManagerFactory::getServiceManager();
 
         $this->assertTrue($serviceManager->has('ReportingCloud'));
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->factory = new ReportingCloudFactory();
     }

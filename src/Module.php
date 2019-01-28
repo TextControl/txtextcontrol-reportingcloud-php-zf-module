@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud;
 
@@ -6,6 +7,8 @@ class Module
 {
     public function getConfig()
     {
-        return include __DIR__ . '/../config/module.config.php';
+        $filename = dirname(__FILE__, 2) . '/config/module.config.php';
+
+        return include $filename;
     }
 }

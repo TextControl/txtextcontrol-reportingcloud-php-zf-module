@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 // Copy this file to '/config/autoload/reportingcloud.local.php' in your Zend Framework 3
 // application; then add the ReportingCloud credentials you got at https://portal.reporting.cloud
