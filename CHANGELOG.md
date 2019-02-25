@@ -14,7 +14,7 @@
 
 ## 2.0.0 - 2018-12-19
 
-* Added support for ReportingCloud PHP Wrapper 2.0.
+* Added support for ReportingCloud PHP SDK 2.0.
 
 ## 1.1.1 - 2018-01-14
 
