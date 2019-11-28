@@ -4,6 +4,11 @@
 
 ## dev-master
 
+## dev-php-7.4
+
+* Added support for PHP 7.4.
+* Updated to PHPUnit 8.
+
 ## 2.0.2 - 2019-01-28
 
 * Added strict typing to all files.

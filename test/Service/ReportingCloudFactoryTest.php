@@ -59,7 +59,7 @@ class ReportingCloudFactoryTest extends TestCase
             $container = new ServiceManager();
             $this->factory->__invoke($container, '');
         } catch (ServiceNotFoundException $e) {
-            $this->assertContains('Unable to resolve service "Config" to a factory', $e->getMessage());
+            $this->assertStringContainsString('Unable to resolve service "Config" to a factory', $e->getMessage());
         }
     }
 
@@ -71,7 +71,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "The key 'reportingcloud' has not been specified in your application's configuration file.";
-            $this->assertContains($needle, $e->getMessage());
+            $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -86,7 +86,7 @@ class ReportingCloudFactoryTest extends TestCase
         } catch (InvalidArgumentException $e) {
             $needle = "The key 'credentials' has not been specified under the key ";
             $needle .= "'reportingcloud' in your application's configuration file.";
-            $this->assertContains($needle, $e->getMessage());
+            $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -102,7 +102,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
-            $this->assertContains($needle, $e->getMessage());
+            $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -120,7 +120,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
-            $this->assertContains($needle, $e->getMessage());
+            $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
 
@@ -138,7 +138,7 @@ class ReportingCloudFactoryTest extends TestCase
             $this->factory->__invoke($container, '');
         } catch (InvalidArgumentException $e) {
             $needle = "Neither the key 'api_key', nor the keys 'username' and 'password' have been specified";
-            $this->assertContains($needle, $e->getMessage());
+            $this->assertStringContainsString($needle, $e->getMessage());
         }
     }
 
