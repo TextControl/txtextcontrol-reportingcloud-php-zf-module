@@ -21,7 +21,7 @@
         }
     },
     "require": {
-        "php": "^7.1 || ^7.4",
+        "php": "^7.1",
         "textcontrol/txtextcontrol-reportingcloud": "^2.0",
         "zendframework/zend-view": "^2.8",
         "zendframework/zend-mvc": "^3.0.1",
