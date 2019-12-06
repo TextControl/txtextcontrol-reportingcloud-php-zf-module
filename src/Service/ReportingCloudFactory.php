@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud\Service;
 
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use TxTextControl\ReportingCloud\ReportingCloud;
 use Zend\ServiceManager\Factory\FactoryInterface;

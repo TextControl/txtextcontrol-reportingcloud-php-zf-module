@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace TxTextControl\ReportingCloud\View\Helper;
 
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class ReportingCloudFactory implements FactoryInterface
