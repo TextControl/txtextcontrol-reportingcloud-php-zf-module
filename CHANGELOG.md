@@ -1,4 +1,4 @@
-![Logo](./data/rc_logo_512.png)
+![Logo](./resource/rc_logo_512.png)
 
 # CHANGELOG
 
@@ -7,6 +7,7 @@
 ## dev-php-7.4
 
 * Added support for PHP 7.4.
+* Improved code quality, using static analysis.
 * Updated to PHPUnit 8.
 
 ## 2.0.2 - 2019-01-28

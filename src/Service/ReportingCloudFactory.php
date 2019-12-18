@@ -1,15 +1,39 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * ReportingCloud Zend Framework 3 Module
+ *
+ * Zend Framework 3 Module for ReportingCloud Web API. Authored and supported by Text Control GmbH.
+ *
+ * @link      https://www.reporting.cloud to learn more about ReportingCloud
+ * @link      https://git.io/Je5US for the canonical source repository
+ * @license   https://raw.githubusercontent.com/TextControl/txtextcontrol-reportingcloud-php/master/LICENSE.md
+ * @copyright © 2020 Text Control GmbH
+ */
+
 namespace TxTextControl\ReportingCloud\Service;
 
-use Psr\Container\ContainerInterface;
+use Interop\Container\ContainerInterface;
 use TxTextControl\ReportingCloud\Exception\InvalidArgumentException;
 use TxTextControl\ReportingCloud\ReportingCloud;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
+/**
+ * Class ReportingCloudFactory
+ *
+ * @package TxTextControl\ReportingCloud
+ * @author  Jonathan Maron (@JonathanMaron)
+ */
 class ReportingCloudFactory implements FactoryInterface
 {
+    /**
+     * @param ContainerInterface $container
+     * @param string             $requestedName
+     * @param array|null         $options
+     *
+     * @return ReportingCloud
+     */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null): ReportingCloud
     {
         $config = $container->get('Config');
@@ -19,6 +43,13 @@ class ReportingCloudFactory implements FactoryInterface
         return new ReportingCloud($credentials);
     }
 
+    /**
+     * Return required credentials to use the Reporting Cloud Web API
+     *
+     * @param array $config
+     *
+     * @return array
+     */
     protected function getCredentials(array $config): array
     {
         $ret = null;
