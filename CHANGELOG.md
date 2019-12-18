@@ -2,7 +2,7 @@
 
 # CHANGELOG
 
-## dev-master
+## 2.1.0 - 2019-12-18
 
 * Added support for PHP 7.4.
 * Improved code quality, using static analysis.
