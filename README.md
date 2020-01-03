@@ -7,6 +7,9 @@
 [![Latest Stable Version](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-zf-module/v/stable)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module)
 [![composer.lock available](https://poser.pugx.org/textcontrol/txtextcontrol-reportingcloud-zf-module/composerlock)](https://packagist.org/packages/textcontrol/txtextcontrol-reportingcloud-zf-module)
 
+> ## Repository abandoned 2020-01-03
+>
+> This repository has moved to `textcontrol/txtextcontrol-reportingcloud-laminas-module`.
 
 ## Install Using Composer
 
