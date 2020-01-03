@@ -5,7 +5,7 @@
 ## 2.2.0 - 2020-01-03
 
 * Repository set as abandoned.
-* Repository set moved to `textcontrol/txtextcontrol-reportingcloud-laminas-module`.
+* Repository moved to `textcontrol/txtextcontrol-reportingcloud-laminas-module`.
 
 ## 2.1.0 - 2019-12-18
 
